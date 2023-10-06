@@ -1,3 +1,76 @@
+@font-face {
+  font-family: Font-awesome-light;
+  src: url(../fontawesome/Font\ Awesome\ 5\ Pro-Light-300.otf);
+}
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
 
+#content-wrap {
+  padding-bottom: 92px;
+}
+
+/* header */
+header {
+  background-color: lightgrey;
+}
+
+.logo {
+  align-self: flex-start;
+  max-width: 165px;
+}
+
+li.nav-item {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.navbar {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  background-color: lightgrey;
+}
+.navbar .row {
+  width: 100%;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: black;
+}
+
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show > .nav-link {
+  color: black;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+  color: gray;
+}
+
+.navbar-light .navbar-toggler {
+  color: black;
+  border-color: transparent;
+  font-size: 24px;
+  justify-self: flex-end;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-collapse .navbar-nav {
+  text-align: center;
+}
+
+i#theIcon {
+  text-align: center;
+  width: 21px;
+}
+
+@media (min-width: 776px) {
+  .logo {
+    align-self: center;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */
