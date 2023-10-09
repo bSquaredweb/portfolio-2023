@@ -72,5 +72,35 @@ i#theIcon {
     align-self: center;
   }
 }
+/* components */
+.chip {
+  display: inline-flex;
+  background-color: lightgray;
+  border-radius: 100px;
+  padding: 4px 12px;
+  width: fit-content;
+}
+
+/* content */
+.content-block {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.background-block {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.intro-block .intro-content {
+  margin-top: 2rem;
+}
+.intro-block .company a {
+  display: flex;
+}
+
+.summary-block {
+  background-color: black;
+}
 
 /*# sourceMappingURL=styles.css.map */
