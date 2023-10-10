@@ -80,7 +80,7 @@ i#theIcon {
 }
 
 /* content */
-.content-subnav {
+.subnav {
     position: sticky;
     top: 63px;
     background-color: black;
@@ -126,8 +126,10 @@ i#theIcon {
 
 /* styleguide */
 #styleguide {
-
     h1 {
         text-align: center;
+    }
+    .scroll-target {
+        scroll-margin-top: 200px!important;
     }
 }

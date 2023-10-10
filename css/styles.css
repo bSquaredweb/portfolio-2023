@@ -86,13 +86,13 @@ i#theIcon {
 }
 
 /* content */
-.content-subnav {
+.subnav {
   position: sticky;
   top: 63px;
   background-color: black;
   z-index: 2;
 }
-.content-subnav ul {
+.subnav ul {
   list-style-type: none;
   display: flex;
   flex-direction: row;
@@ -101,10 +101,10 @@ i#theIcon {
   justify-content: center;
   margin-bottom: 0;
 }
-.content-subnav ul li {
+.subnav ul li {
   padding: 8px;
 }
-.content-subnav .active {
+.subnav .active {
   color: pink;
 }
 
@@ -132,6 +132,9 @@ i#theIcon {
 /* styleguide */
 #styleguide h1 {
   text-align: center;
+}
+#styleguide .scroll-target {
+  scroll-margin-top: 200px !important;
 }
 
 /*# sourceMappingURL=styles.css.map */
