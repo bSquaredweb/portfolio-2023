@@ -3,14 +3,24 @@
     src: url(../fontawesome/Font\ Awesome\ 5\ Pro-Light-300.otf);
 }
 
+/* fonts */
+$primary-font: 'Poppins', sans-serif;
+$secondary-font: 'Calistoga', serif;
+
+
+/* font weights */
+$regular: 400;
+$medium: 500;
+$bold: 700;
+
+
+/* wrappers */
 .content-wrap {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
-main {
-    flex-grow: 1;
-}
+
 
 /* header */
 header {
@@ -68,10 +78,18 @@ i#theIcon {
     }
 }
 
+
+/* main */
+main {
+    flex-grow: 1;
+}
+
+
 /* footer */
 footer {
     width: 100%;
-    height: 92px;
+    min-height: 92px;
+    padding: 16px 0 4px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -98,7 +116,18 @@ footer {
     }
 }
 
+
 /* components */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: $secondary-font;
+    font-weight: $medium;
+}
+body, p, ol, ul, li {
+    font-family: $primary-font;
+    font-weight: $regular;
+    line-height: 1.4;
+}
 .card {
     z-index: 0;
 }
@@ -154,6 +183,7 @@ footer {
 .summary-block {
     background-color: black;
 }
+
 
 /* styleguide */
 #styleguide {
