@@ -177,8 +177,33 @@ body, p, ol, ul, li {
 #styleguide .subnav {
   position: sticky;
   top: 63px;
-  background-color: #292929;
   z-index: 2;
+}
+#styleguide .subnav.sticky {
+  background-color: #292929;
+  transition: background-color 0.2s;
+}
+#styleguide .subnav.sticky a {
+  color: #f2f1ed;
+  text-decoration: none;
+  font-weight: 600;
+}
+#styleguide .subnav.sticky a::before {
+  content: "• ";
+  color: transparent;
+}
+#styleguide .subnav.sticky a::after {
+  content: " •";
+  color: transparent;
+}
+#styleguide .subnav.sticky a.active {
+  color: #c19ca6;
+}
+#styleguide .subnav.sticky a.active::before {
+  color: #c19ca6;
+}
+#styleguide .subnav.sticky a.active::after {
+  color: #c19ca6;
 }
 #styleguide .subnav ul {
   list-style-type: none;
@@ -194,7 +219,7 @@ body, p, ol, ul, li {
   padding: 0.375rem;
 }
 #styleguide .subnav ul li a {
-  color: #f2f1ed;
+  color: #292929;
   text-decoration: none;
   font-weight: 600;
 }
@@ -207,13 +232,13 @@ body, p, ol, ul, li {
   color: transparent;
 }
 #styleguide .subnav ul li a.active {
-  color: #c19ca6;
+  color: #985F6F;
 }
 #styleguide .subnav ul li a.active::before {
-  color: #c19ca6;
+  color: #985F6F;
 }
 #styleguide .subnav ul li a.active::after {
-  color: #c19ca6;
+  color: #985F6F;
 }
 #styleguide .scroll-target {
   scroll-margin-top: 200px !important;
@@ -221,6 +246,7 @@ body, p, ol, ul, li {
 #styleguide .color-circle {
   height: 100px;
   width: 100px;
+  border-radius: 50%;
 }
 #styleguide .color-circle.color-dark {
   background-color: #292929;

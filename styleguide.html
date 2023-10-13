@@ -61,7 +61,7 @@
                         </div>
                     </div>
                 </section>
-                <section class="content-block subnav py-3 mb-5">
+                <section id="subnav" class="content-block subnav py-3 mb-5">
                     <div class="container">
                         <div class="row">
                             <div class="col-12">
@@ -81,23 +81,23 @@
                         </div>
                     </div>
                 </section>
-                <section class="content-block">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12">
-                                <section id="typography" class="scroll-target">
-                                    <h2>Typography</h2>
-                                    <p class="h1">Heading 1</p>
-                                    <p class="h2">Heading 2</p>
-                                    <p class="h3">Heading 3</p>
-                                    <p class="h4">Heading 4</p>
-                                    <p>This is paragraph text.</p>
-                                </section>
+                <section class="scrollable-container">
+                    <section class="content-block">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <section id="typography" class="scroll-target">
+                                        <h2>Typography</h2>
+                                        <p class="h1">Heading 1</p>
+                                        <p class="h2">Heading 2</p>
+                                        <p class="h3">Heading 3</p>
+                                        <p class="h4">Heading 4</p>
+                                        <p>This is paragraph text.</p>
+                                    </section>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </section>
-                <section class="scrollable-container">
+                    </section>
                     <section class="content-block">
                         <div class="container">
                             <div class="row">
@@ -215,8 +215,6 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
     
     <script>
         var element = document.getElementById("theIcon");
@@ -236,11 +234,13 @@
                 element.classList.add("fa-bars");
             }
         };
-
-        console.log(element);
-        
     </script>
     <script>
+        window.onscroll = function() {
+            stickyFunc();
+            scrollDownFunc();
+        };
+
         let menuSection = document.querySelectorAll('#styleguide-subnav li a');
 
         // for clickable event
@@ -251,20 +251,31 @@
             v.classList.add('active')
         },300)
         })
-        })
+        });
+
+        var subnav = document.getElementById('subnav');
+        var sticky = subnav.offsetTop;
+
+        function stickyFunc() {
+        if (window.pageYOffset >= sticky) {
+            subnav.classList.add('sticky')
+        } else {
+            subnav.classList.remove('sticky');
+        }
+        };
 
         // for window scrolldown event
-        window.onscroll = (()=> {
-        let mainSection = document.querySelectorAll('.scrollable-container section');
+        function scrollDownFunc() {
+            let mainSection = document.querySelectorAll('.scrollable-container .scroll-target');
 
-        mainSection.forEach((v,i)=> {
-            let rect = v.getBoundingClientRect().y
-            if(rect < window.innerHeight-200){
-            menuSection.forEach(v=> v.classList.remove('active'))
-            menuSection[i].classList.add('active')
-            }
-        })
-        })
+            mainSection.forEach((v,i)=> {
+                let rect = v.getBoundingClientRect().y
+                if(rect < window.innerHeight-220){
+                menuSection.forEach(v=> v.classList.remove('active'))
+                menuSection[i].classList.add('active')
+                }
+            })
+        };
     </script>
 </body>
 </html>
