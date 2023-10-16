@@ -139,6 +139,10 @@ body, p, ol, ul, li {
   color: #292929;
 }
 
+.bold {
+  font-weight: 600;
+}
+
 .card {
   z-index: 0;
 }
@@ -243,10 +247,32 @@ body, p, ol, ul, li {
 #styleguide .scroll-target {
   scroll-margin-top: 200px !important;
 }
+#styleguide h2, #styleguide .h2-alt {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: #767676;
+  text-transform: uppercase;
+  letter-spacing: 0.03125rem;
+  padding-bottom: 0.125rem;
+  border-bottom: 2px solid #767676;
+  margin-bottom: 1rem;
+}
+#styleguide .description-wrap {
+  padding: 1rem 0;
+}
+#styleguide .color-card {
+  display: flex;
+  flex-direction: row;
+  border-color: transparent;
+  align-items: center;
+  gap: 1rem;
+}
 #styleguide .color-circle {
   height: 100px;
   width: 100px;
   border-radius: 50%;
+  margin-bottom: 1rem;
 }
 #styleguide .color-circle.color-dark {
   background-color: #292929;
@@ -256,6 +282,9 @@ body, p, ol, ul, li {
 }
 #styleguide .color-circle.color-accent {
   background-color: #985F6F;
+}
+#styleguide .icon-example {
+  font-size: 2rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

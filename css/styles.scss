@@ -158,6 +158,9 @@ body, p, ol, ul, li {
     font-weight: $regular;
     color: $color-dark
 }
+.bold {
+    font-weight: $bold;
+}
 .card {
     z-index: 0;
 }
@@ -278,10 +281,32 @@ body, p, ol, ul, li {
         //     scroll-margin-top: 220px !important;
         // }
     }
+    h2, .h2-alt {
+        font-family: $primary-font;
+        font-weight: $bold;
+        font-size: 1.125rem;
+        color: lighten($color-dark, 30%);
+        text-transform: uppercase;
+        letter-spacing: 0.03125rem;
+        padding-bottom: 0.125rem;
+        border-bottom: 2px solid lighten($color-dark, 30%);
+        margin-bottom: 1rem;
+    }
+    .description-wrap {
+        padding: 1rem 0;
+    }
+    .color-card {
+        display: flex;
+        flex-direction: row;
+        border-color: transparent;
+        align-items: center;
+        gap: 1rem;
+    }
     .color-circle {
         height: 100px;
         width: 100px;
         border-radius: 50%;
+        margin-bottom: 1rem;
 
         &.color-dark {
             background-color: $color-dark;
@@ -292,5 +317,8 @@ body, p, ol, ul, li {
         &.color-accent {
             background-color: $color-accent;
         }
+    }
+    .icon-example {
+        font-size: 2rem;
     }
 }
