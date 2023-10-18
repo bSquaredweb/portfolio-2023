@@ -8,7 +8,7 @@
 /* colors */
 /* wrappers */
 body {
-  background-color: #f2f1ed;
+  background-color: #F2F1ED;
 }
 
 .content-wrap {
@@ -35,7 +35,7 @@ li.nav-item {
 .navbar {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  background-color: #DCDAD0;
+  background-color: #dddacf;
 }
 .navbar .row {
   width: 100%;
@@ -112,7 +112,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #DCDAD0;
+  background-color: #dddacf;
 }
 footer p {
   margin-bottom: 0.75rem;
@@ -124,7 +124,7 @@ footer a i {
   padding-right: 0.25rem;
 }
 footer a i:hover {
-  color: #c6c3b3;
+  color: #4F7382;
 }
 footer i {
   font-size: 1.25rem;
@@ -193,7 +193,7 @@ body, p, ol, ul, li {
   transition: background-color 0.2s;
 }
 #styleguide .subnav.sticky a {
-  color: #f2f1ed;
+  color: #F2F1ED;
   text-decoration: none;
   font-weight: 600;
 }
@@ -260,7 +260,7 @@ body, p, ol, ul, li {
   text-transform: uppercase;
   letter-spacing: 0.03125rem;
   padding-bottom: 0.125rem;
-  border-bottom: 2px solid #767676;
+  border-bottom: 2px solid dimgray;
   margin-bottom: 1rem;
 }
 #styleguide .description-wrap {
@@ -278,8 +278,13 @@ body, p, ol, ul, li {
   height: 100px;
   width: 100px;
   border-radius: 50%;
-  margin-bottom: 1rem;
   border: 1px solid;
+}
+@media (max-width: 992px) {
+  #styleguide .color-card .color-circle {
+    height: 70px;
+    width: 70px;
+  }
 }
 #styleguide .color-card .color-circle.color-dark {
   background-color: #292929;
@@ -294,43 +299,55 @@ body, p, ol, ul, li {
   border-color: #101010;
 }
 #styleguide .color-card .color-circle.color-light {
-  background-color: #DCDAD0;
-  border-color: #DCDAD0;
+  background-color: #F2F1ED;
+  border-color: dimgray;
 }
 #styleguide .color-card .color-circle.color-light.lighter {
-  background-color: #f2f1ed;
-  border-color: #c6c3b3;
+  background-color: white;
+  border-color: white;
 }
 #styleguide .color-card .color-circle.color-light.darker {
-  background-color: #c6c3b3;
-  border-color: #c6c3b3;
+  background-color: #dddacf;
+  border-color: #dddacf;
 }
 #styleguide .color-card .color-circle.accent-red {
   background-color: #99566A;
   border-color: #99566A;
 }
-#styleguide .color-card .color-circle.accent-red_light {
+#styleguide .color-card .color-circle.accent-red.lighter {
   background-color: #d5b3bd;
   border-color: #d5b3bd;
+}
+#styleguide .color-card .color-circle.accent-red.darker {
+  background-color: #784453;
+  border-color: #784453;
 }
 #styleguide .color-card .color-circle.accent-green {
   background-color: #487568;
   border-color: #487568;
 }
-#styleguide .color-card .color-circle.accent-green_light {
+#styleguide .color-card .color-circle.accent-green.lighter {
   background-color: #97bfb3;
   border-color: #97bfb3;
+}
+#styleguide .color-card .color-circle.accent-green.darker {
+  background-color: #35554c;
+  border-color: #35554c;
 }
 #styleguide .color-card .color-circle.accent-blue {
   background-color: #4F7382;
   border-color: #4F7382;
 }
-#styleguide .color-card .color-circle.accent-blue_light {
-  background-color: #a3bcc7;
-  border-color: #a3bcc7;
+#styleguide .color-card .color-circle.accent-blue.lighter {
+  background-color: #638fa1;
+  border-color: #638fa1;
+}
+#styleguide .color-card .color-circle.accent-blue.darker {
+  background-color: #3c5762;
+  border-color: #3c5762;
 }
 #styleguide .color-card .color-info p {
-  margin-bottom: 0.125rem;
+  margin-bottom: 0.25rem;
 }
 #styleguide .icon-example {
   font-size: 2rem;
