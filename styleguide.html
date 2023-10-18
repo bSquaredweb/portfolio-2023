@@ -8,7 +8,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Poppins:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
 
     <script src="https://kit.fontawesome.com/501ce2b652.js" crossorigin="anonymous"></script>
 
@@ -113,8 +114,20 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="description-wrap">
-                                                    <p>The quick brown <span class="bold">fox</span> jumps over the lazy <span class="bold">dog</span>.</p>
-                                                    <p>Poppins | Regular 400 and SemiBold 600 | 1rem</p>
+                                                    <p>Standard paragraph text</p>
+                                                    <p>Poppins | Regular 400 | 1rem</p>
+                                                </div>
+                                                <div class="description-wrap">
+                                                    <p>Caption text</p>
+                                                    <p>Poppins | Italic 400 | 1rem</p>
+                                                </div>
+                                                <div class="description-wrap">
+                                                    <p class="text-link">Text link</p>
+                                                    <p>Poppins | SemiBold 600 | 1rem</p>
+                                                </div>
+                                                <div class="description-wrap">
+                                                    <p class="text-link_hovered">Text link hover</p>
+                                                    <p>Poppins | SemiBold 600 | 1rem</p>
                                                 </div>
                                                 <!-- <div class="description-wrap">
                                                     <p class="blockquote">This is quoted text. other options: lead, display</p>
@@ -135,30 +148,107 @@
                                     <div id="color" class="scroll-target">
                                         <h2>Color</h2> 
                                         <div class="row">
-                                            <div class="col-sm-4">
+                                            <div class="col-md-6 col-xl-3">
                                                 <div class="card color-card">
                                                     <span class="color-circle color-dark"></span>
                                                     <div class="color-info">
                                                         <p>$color-dark</p>
+                                                        <p>base</p>
                                                         <p>#292929</p>
                                                     </div>
                                                 </div>
+                                                <div class="card color-card">
+                                                    <span class="color-circle color-dark lighter"></span>
+                                                    <div class="color-info">
+                                                        <p>$color-dark</p>
+                                                        <p>lighten, 10%</p>
+                                                        <p>#434343</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card color-card">
+                                                    <span class="color-circle color-dark darker"></span>
+                                                    <div class="color-info">
+                                                        <p>$color-dark</p>
+                                                        <p>darken, 10%</p>
+                                                        <p>#101010</p>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="col-sm-4">
+                                            <div class="col-md-6 col-xl-3">
                                                 <div class="card color-card">
                                                     <span class="color-circle color-light"></span>
                                                     <div class="color-info">
                                                         <p>$color-light</p>
+                                                        <p>base</p>
                                                         <p>#DCDAD0</p>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-sm-4">
                                                 <div class="card color-card">
-                                                    <span class="color-circle color-accent"></span>
+                                                    <span class="color-circle color-light lighter"></span>
                                                     <div class="color-info">
-                                                        <p>$color-accent</p>
-                                                        <p>#985F6F</p>
+                                                        <p>$color-light</p>
+                                                        <p>lighten, 10%</p>
+                                                        <p>#F2F1ED</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card color-card">
+                                                    <span class="color-circle color-light darker"></span>
+                                                    <div class="color-info">
+                                                        <p>$color-light</p>
+                                                        <p>darken, 10%</p>
+                                                        <p>#C6C3B3</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-xl-3">
+                                                <div class="card color-card">
+                                                    <span class="color-circle accent-red"></span>
+                                                    <div class="color-info">
+                                                        <p>$accent-red</p>
+                                                        <p>base</p>
+                                                        <p>#99566A</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card color-card">
+                                                    <span class="color-circle accent-green"></span>
+                                                    <div class="color-info">
+                                                        <p>$accent-green</p>
+                                                        <p>base</p>
+                                                        <p>#487568</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card color-card">
+                                                    <span class="color-circle accent-blue"></span>
+                                                    <div class="color-info">
+                                                        <p>$accent-blue</p>
+                                                        <p>base</p>
+                                                        <p>#4F7382</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-xl-3">
+                                                <div class="card color-card">
+                                                    <span class="color-circle accent-red_light"></span>
+                                                    <div class="color-info">
+                                                        <p>$accent-red</p>
+                                                        <p>lighten, 30%</p>
+                                                        <p>#D5B3BD</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card color-card">
+                                                    <span class="color-circle accent-green_light"></span>
+                                                    <div class="color-info">
+                                                        <p>$accent-green</p>
+                                                        <p>lighten, 30%</p>
+                                                        <p>#487568</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card color-card">
+                                                    <span class="color-circle accent-blue_light"></span>
+                                                    <div class="color-info">
+                                                        <p>$accent-blue</p>
+                                                        <p>lighten, 30%</p>
+                                                        <p>#4F7382</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -179,7 +269,7 @@
                                             <div class="col-md-6">
                                                 <div class="description-wrap">
                                                     <p class="icon-example"><i class="fa-regular fa-bars"></i></p>
-                                                    <p>Bars | Regular</p>
+                                                    <p>bars | Regular</p>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">

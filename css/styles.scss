@@ -15,10 +15,15 @@ $bold: 600;
 /* colors */
 $color-dark: #292929;
 $color-light: #DCDAD0;
-$color-accent: #985F6F;
+$accent-red: #99566A;
+$accent-green: #487568;
+$accent-blue:#4F7382;
 
 
 /* wrappers */
+body {
+    background-color: lighten($color-light, 10%);
+}
 .content-wrap {
     min-height: 100vh;
     display: flex;
@@ -61,26 +66,26 @@ li.nav-item {
         }
 }
 .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
-    color: $color-accent;
+    color: $accent-red;
 
         &::before {
-            color: $color-accent;
+            color: $accent-red;
         }
         &::after {
-            color: $color-accent;
+            color: $accent-red;
         }
     
     &:hover {
         &::before {
-            color: darken($color-accent, 20%);
+            color: darken($accent-red, 20%);
         }
         &::after {
-            color: darken($color-accent, 20%);
+            color: darken($accent-red, 20%);
         }
     }
 }
 .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
-    color: darken($color-accent, 20%);
+    color: darken($accent-red, 20%);
 }
 .navbar-light .navbar-toggler {
     color: $color-dark;
@@ -163,10 +168,11 @@ body, p, ol, ul, li {
 }
 .card {
     z-index: 0;
+    background-color: transparent;
 }
 .chip {
     display: inline-flex;
-    background-color: lighten($color-accent, 30%);
+    background-color: lighten($accent-red, 30%);
     border-radius: 100px;
     padding: 0.25rem 0.75rem;
     width: fit-content;
@@ -221,13 +227,13 @@ body, p, ol, ul, li {
                 }
 
                 &.active {
-                    color: lighten($color-accent, 20%);
+                    color: lighten($accent-red, 20%);
 
                     &::before {
-                        color: lighten($color-accent, 20%);
+                        color: lighten($accent-red, 20%);
                     }
                     &::after {
-                        color: lighten($color-accent, 20%);
+                        color: lighten($accent-red, 20%);
                     }
                 }
             }
@@ -261,13 +267,13 @@ body, p, ol, ul, li {
                     }
     
                     &.active {
-                        color: $color-accent;
+                        color: $accent-red;
     
                         &::before {
-                            color: $color-accent;
+                            color: $accent-red;
                         }
                         &::after {
-                            color: $color-accent;
+                            color: $accent-red;
                         }
                     }
                 }
@@ -301,21 +307,76 @@ body, p, ol, ul, li {
         border-color: transparent;
         align-items: center;
         gap: 1rem;
-    }
-    .color-circle {
-        height: 100px;
-        width: 100px;
-        border-radius: 50%;
-        margin-bottom: 1rem;
+        margin-bottom: 1.25rem;
 
-        &.color-dark {
-            background-color: $color-dark;
+        .color-circle {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            border: 1px solid;
+    
+            &.color-dark {
+                background-color: $color-dark;
+                border-color: $color-dark;
+    
+                &.lighter {
+                    background-color: lighten($color-dark, 10%);
+                    border-color: lighten($color-dark, 10%);
+                }
+    
+                &.darker {
+                    background-color: darken($color-dark, 10%);
+                    border-color: darken($color-dark, 10%);
+                }
+            }
+            &.color-light {
+                background-color: $color-light;
+                border-color: $color-light;
+    
+                &.lighter {
+                    background-color: lighten($color-light, 10%);
+                    border-color: darken($color-light, 10%);
+                }
+    
+                &.darker {
+                    background-color: darken($color-light, 10%);
+                    border-color: darken($color-light, 10%);
+                }
+            }
+            &.accent-red {
+                background-color: $accent-red;
+                border-color: $accent-red;
+    
+                &_light {
+                    background-color: lighten($accent-red, 30%);
+                    border-color: lighten($accent-red, 30%);
+                }
+            }
+            &.accent-green {
+                background-color: $accent-green;
+                border-color: $accent-green;
+    
+                &_light {
+                    background-color: lighten($accent-green, 30%);
+                    border-color: lighten($accent-green, 30%);
+                }
+            }
+            &.accent-blue {
+                background-color: $accent-blue;
+                border-color: $accent-blue;
+    
+                &_light {
+                    background-color: lighten($accent-blue, 30%);
+                    border-color: lighten($accent-blue, 30%);
+                }
+            }
         }
-        &.color-light {
-            background-color: $color-light;
-        }
-        &.color-accent {
-            background-color: $color-accent;
+
+        .color-info {
+            p {
+                margin-bottom: 0.125rem;
+            }
         }
     }
     .icon-example {

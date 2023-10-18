@@ -7,6 +7,10 @@
 /* font weights */
 /* colors */
 /* wrappers */
+body {
+  background-color: #f2f1ed;
+}
+
 .content-wrap {
   min-height: 100vh;
   display: flex;
@@ -51,23 +55,23 @@ li.nav-item {
 }
 
 .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show > .nav-link {
-  color: #985F6F;
+  color: #99566A;
 }
 .navbar-light .navbar-nav .nav-link.active::before, .navbar-light .navbar-nav .show > .nav-link::before {
-  color: #985F6F;
+  color: #99566A;
 }
 .navbar-light .navbar-nav .nav-link.active::after, .navbar-light .navbar-nav .show > .nav-link::after {
-  color: #985F6F;
+  color: #99566A;
 }
 .navbar-light .navbar-nav .nav-link.active:hover::before, .navbar-light .navbar-nav .show > .nav-link:hover::before {
-  color: #593841;
+  color: #58313d;
 }
 .navbar-light .navbar-nav .nav-link.active:hover::after, .navbar-light .navbar-nav .show > .nav-link:hover::after {
-  color: #593841;
+  color: #58313d;
 }
 
 .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
-  color: #593841;
+  color: #58313d;
 }
 
 .navbar-light .navbar-toggler {
@@ -145,11 +149,12 @@ body, p, ol, ul, li {
 
 .card {
   z-index: 0;
+  background-color: transparent;
 }
 
 .chip {
   display: inline-flex;
-  background-color: #d5bbc2;
+  background-color: #d5b3bd;
   border-radius: 100px;
   padding: 0.25rem 0.75rem;
   width: fit-content;
@@ -201,13 +206,13 @@ body, p, ol, ul, li {
   color: transparent;
 }
 #styleguide .subnav.sticky a.active {
-  color: #c19ca6;
+  color: #c293a1;
 }
 #styleguide .subnav.sticky a.active::before {
-  color: #c19ca6;
+  color: #c293a1;
 }
 #styleguide .subnav.sticky a.active::after {
-  color: #c19ca6;
+  color: #c293a1;
 }
 #styleguide .subnav ul {
   list-style-type: none;
@@ -236,13 +241,13 @@ body, p, ol, ul, li {
   color: transparent;
 }
 #styleguide .subnav ul li a.active {
-  color: #985F6F;
+  color: #99566A;
 }
 #styleguide .subnav ul li a.active::before {
-  color: #985F6F;
+  color: #99566A;
 }
 #styleguide .subnav ul li a.active::after {
-  color: #985F6F;
+  color: #99566A;
 }
 #styleguide .scroll-target {
   scroll-margin-top: 200px !important;
@@ -267,21 +272,65 @@ body, p, ol, ul, li {
   border-color: transparent;
   align-items: center;
   gap: 1rem;
+  margin-bottom: 1.25rem;
 }
-#styleguide .color-circle {
+#styleguide .color-card .color-circle {
   height: 100px;
   width: 100px;
   border-radius: 50%;
   margin-bottom: 1rem;
+  border: 1px solid;
 }
-#styleguide .color-circle.color-dark {
+#styleguide .color-card .color-circle.color-dark {
   background-color: #292929;
+  border-color: #292929;
 }
-#styleguide .color-circle.color-light {
+#styleguide .color-card .color-circle.color-dark.lighter {
+  background-color: #434343;
+  border-color: #434343;
+}
+#styleguide .color-card .color-circle.color-dark.darker {
+  background-color: #101010;
+  border-color: #101010;
+}
+#styleguide .color-card .color-circle.color-light {
   background-color: #DCDAD0;
+  border-color: #DCDAD0;
 }
-#styleguide .color-circle.color-accent {
-  background-color: #985F6F;
+#styleguide .color-card .color-circle.color-light.lighter {
+  background-color: #f2f1ed;
+  border-color: #c6c3b3;
+}
+#styleguide .color-card .color-circle.color-light.darker {
+  background-color: #c6c3b3;
+  border-color: #c6c3b3;
+}
+#styleguide .color-card .color-circle.accent-red {
+  background-color: #99566A;
+  border-color: #99566A;
+}
+#styleguide .color-card .color-circle.accent-red_light {
+  background-color: #d5b3bd;
+  border-color: #d5b3bd;
+}
+#styleguide .color-card .color-circle.accent-green {
+  background-color: #487568;
+  border-color: #487568;
+}
+#styleguide .color-card .color-circle.accent-green_light {
+  background-color: #97bfb3;
+  border-color: #97bfb3;
+}
+#styleguide .color-card .color-circle.accent-blue {
+  background-color: #4F7382;
+  border-color: #4F7382;
+}
+#styleguide .color-card .color-circle.accent-blue_light {
+  background-color: #a3bcc7;
+  border-color: #a3bcc7;
+}
+#styleguide .color-card .color-info p {
+  margin-bottom: 0.125rem;
 }
 #styleguide .icon-example {
   font-size: 2rem;
