@@ -20,9 +20,12 @@ $accent-green: #487568;
 $accent-blue:#4F7382;
 
 
-/* wrappers */
+/* base */
 body {
     background-color: $color-light;
+    font-family: $primary-font;
+    font-weight: $regular;
+    color: $color-dark;
 }
 .content-wrap {
     min-height: 100vh;
@@ -107,7 +110,7 @@ i#theIcon {
     width: 21px;
 }
 
-@media (min-width: 776px) {
+@media (min-width: 768px) {
     .logo {
         align-self: center;
     }
@@ -157,14 +160,58 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: $secondary-font;
     font-weight: $regular;
+    color: $color-dark;
 }
-body, p, ol, ul, li {
+p, ol, ul, li {
     font-family: $primary-font;
     font-weight: $regular;
-    color: $color-dark
+    color: $color-dark;
 }
 .bold {
     font-weight: $bold;
+}
+.btn {
+    padding: 0.75rem 1.25rem;
+    transition: all 0.3s ease-in-out;
+
+    &:hover, &:focus {
+        transition: all 0.3s ease-in-out;
+    }
+
+    &.btn-outline-primary {
+        color: $color-dark;
+        background-color: $color-light;
+        border: 2px solid $color-dark;
+        box-shadow: 4px 4px $color-dark;
+
+        &:hover, &:focus {
+            color: $color-light;
+            background-color: $color-dark;
+            box-shadow: none;
+        }
+    }
+
+    &.btn-primary {
+        color: $color-light;
+        background-color: $color-dark;
+        border: 2px solid $color-dark;
+
+        &:hover, &:focus {
+            color: $color-light;
+            background-color: darken($color-dark, 10%);
+            border-color: darken($color-dark, 20%);
+        }
+    }
+
+    &.btn-light {
+        background-color: $color-light;
+        border-color: $color-light;
+        
+        &:hover, &:focus {
+            background-color: darken($color-light, 10%);
+            border-color: darken($color-light, 20%);
+        }
+    }
 }
 .card {
     z-index: 0;
@@ -174,9 +221,60 @@ body, p, ol, ul, li {
     display: inline-flex;
     background-color: lighten($accent-red, 30%);
     border-radius: 100px;
+    font-size: 0.75rem;
     padding: 0.25rem 0.75rem;
     width: fit-content;
 }
+
+.background-dark {
+    background-color: $color-dark;
+
+    h1, h2, h3, h4, h5, h6, 
+    .h1, .h2, .h3, .h4, .h5, .h6,
+    p, ul, ol, li {
+        color: $color-light;
+    }
+
+    .btn {
+        
+        &.btn-outline-primary {
+            color: $color-light;
+            background-color: $color-dark;
+            border: 2px solid $color-light;
+            box-shadow: 4px 4px $color-light;
+    
+            &:hover, &:focus {
+                color: $color-dark;
+                background-color: $color-light;
+                box-shadow: none;
+            }
+        }
+    
+        &.btn-primary {
+            color: $color-dark;
+            background-color: $color-light;
+            border: 2px solid $color-light;
+    
+            &:hover, &:focus {
+                color: $color-dark;
+                background-color: darken($color-light, 10%);
+                border-color: darken($color-light, 20%);
+            }
+        }
+    
+        &.btn-light {
+            color: $color-light;
+            background-color: $color-dark;
+            border-color: $color-dark;
+            
+            &:hover, &:focus {
+                background-color: darken($color-dark, 10%);
+                border-color: darken($color-dark, 20%);
+            }
+        }
+    }
+}
+
 
 /* content */
 .content-block {
@@ -283,113 +381,133 @@ body, p, ol, ul, li {
     .scroll-target {
         scroll-margin-top: 200px!important;
 
-        // @media (min-width:776px) {
+        // @media (min-width:768px) {
         //     scroll-margin-top: 220px !important;
         // }
     }
-    h2, .h2-alt {
+    h2 {
         font-family: $primary-font;
         font-weight: $bold;
         font-size: 1.125rem;
         color: lighten($color-dark, 30%);
         text-transform: uppercase;
-        letter-spacing: 0.03125rem;
+        letter-spacing: 0.5px;
         padding-bottom: 0.125rem;
         border-bottom: 2px solid lighten($color-dark, 25%);
         margin-bottom: 1rem;
     }
+    h3 {
+        font-size: 1rem;
+    }
     .description-wrap {
         padding: 1rem 0;
     }
-    .color-card {
-        display: flex;
-        flex-direction: row;
-        border-color: transparent;
-        align-items: center;
-        gap: 1rem;
-        margin-bottom: 1.25rem;
-
-        .color-circle {
-            height: 100px;
-            width: 100px;
-            border-radius: 50%;
-            border: 1px solid;
-
-            @media (max-width: 992px) {
-                height: 70px;
-                width: 70px;
-            }
-    
-            &.color-dark {
-                background-color: $color-dark;
-                border-color: $color-dark;
-    
-                &.lighter {
-                    background-color: lighten($color-dark, 10%);
-                    border-color: lighten($color-dark, 10%);
-                }
-                &.darker {
-                    background-color: darken($color-dark, 10%);
-                    border-color: darken($color-dark, 10%);
-                }
-            }
-            &.color-light {
-                background-color: $color-light;
-                border-color: lighten($color-dark, 25%);
-    
-                &.lighter {
-                    background-color: lighten($color-light, 10%);
-                    border-color: lighten($color-light, 10%);
-                }
-                &.darker {
-                    background-color: darken($color-light, 10%);
-                    border-color: darken($color-light, 10%);
-                }
-            }
-            &.accent-red {
-                background-color: $accent-red;
-                border-color: $accent-red;
-    
-                &.lighter {
-                    background-color: lighten($accent-red, 30%);
-                    border-color: lighten($accent-red, 30%);
-                }
-                &.darker {
-                    background-color: darken($accent-red, 10%);
-                    border-color: darken($accent-red, 10%);
-                }
-            }
-            &.accent-green {
-                background-color: $accent-green;
-                border-color: $accent-green;
-    
-                &.lighter {
-                    background-color: lighten($accent-green, 30%);
-                    border-color: lighten($accent-green, 30%);
-                }
-                &.darker {
-                    background-color: darken($accent-green, 10%);
-                    border-color: darken($accent-green, 10%);
-                }
-            }
-            &.accent-blue {
-                background-color: $accent-blue;
-                border-color: $accent-blue;
-    
-                &.lighter {
-                    background-color: lighten($accent-blue, 10%);
-                    border-color: lighten($accent-blue, 10%);
-                }
-                &.darker {
-                    background-color: darken($accent-blue, 10%);
-                    border-color: darken($accent-blue, 10%);
-                }
+    .color {
+        .row {
+            margin-bottom: 3rem;
+            @media (min-width:576px) {
+                margin-bottom: 1rem;
             }
         }
+        .color-card {
+            display: flex;
+            flex-direction: column;
+            border-color: transparent;
+            margin-bottom: 1.25rem;
+            align-items: center;
+            text-align: center;
+    
+            @media (min-width:768px) {
+                flex-direction: row;
+                gap: 1rem;
+                text-align: left;
+            }
+    
+            .color-circle {
+                height: 70px;
+                width: 70px;
+                border-radius: 50%;
+                border: 1px solid;
+                margin-bottom: 0.5rem;
 
-        .color-info {
-            p {
-                margin-bottom: 0.25rem;
+                @media (min-width: 992px) {
+                    height: 100px;
+                    width: 100px;
+                    margin-bottom: 0;
+                }
+        
+                &.color-dark {
+                    background-color: $color-dark;
+                    border-color: $color-dark;
+        
+                    &.lighter {
+                        background-color: lighten($color-dark, 10%);
+                        border-color: lighten($color-dark, 10%);
+                    }
+                    &.darker {
+                        background-color: darken($color-dark, 10%);
+                        border-color: darken($color-dark, 10%);
+                    }
+                }
+                &.color-light {
+                    background-color: $color-light;
+                    border-color: lighten($color-dark, 25%);
+        
+                    &.lighter {
+                        background-color: lighten($color-light, 10%);
+                        border-color: lighten($color-light, 10%);
+                    }
+                    &.darker {
+                        background-color: darken($color-light, 10%);
+                        border-color: darken($color-light, 10%);
+                    }
+                }
+                &.accent-red {
+                    background-color: $accent-red;
+                    border-color: $accent-red;
+        
+                    &.lighter {
+                        background-color: lighten($accent-red, 30%);
+                        border-color: lighten($accent-red, 30%);
+                    }
+                    &.darker {
+                        background-color: darken($accent-red, 10%);
+                        border-color: darken($accent-red, 10%);
+                    }
+                }
+                &.accent-green {
+                    background-color: $accent-green;
+                    border-color: $accent-green;
+        
+                    &.lighter {
+                        background-color: lighten($accent-green, 30%);
+                        border-color: lighten($accent-green, 30%);
+                    }
+                    &.darker {
+                        background-color: darken($accent-green, 10%);
+                        border-color: darken($accent-green, 10%);
+                    }
+                }
+                &.accent-blue {
+                    background-color: $accent-blue;
+                    border-color: $accent-blue;
+        
+                    &.lighter {
+                        background-color: lighten($accent-blue, 10%);
+                        border-color: lighten($accent-blue, 10%);
+                    }
+                    &.darker {
+                        background-color: darken($accent-blue, 10%);
+                        border-color: darken($accent-blue, 10%);
+                    }
+                }
+            }
+    
+            .color-info {
+                p {
+                    margin-bottom: 0.25rem;
+                    font-size: 0.875rem;
+                }
             }
         }
     }
