@@ -13,11 +13,11 @@ $regular: 400;
 $bold: 600;
 
 /* colors */
-$color-dark: #292929;
-$color-light: #F2F1ED;
-$accent-red: #99566A;
-$accent-green: #487568;
-$accent-blue:#4F7382;
+$color-dark: hsl(0,0,16);
+$color-light: hsl(48,16,94);
+$accent-red: hsl(343,28,47);
+$accent-green: hsl(163,24,37);
+$accent-blue:hsl(198,24,41);
 
 
 /* base */
@@ -178,7 +178,7 @@ p, ol, ul, li {
         transition: all 0.3s ease-in-out;
     }
 
-    &.btn-outline-primary {
+    &.btn-cta {
         color: $color-dark;
         background-color: $color-light;
         border: 2px solid $color-dark;
@@ -195,21 +195,34 @@ p, ol, ul, li {
         color: $color-light;
         background-color: $color-dark;
         border: 2px solid $color-dark;
-
+        
         &:hover, &:focus {
             color: $color-light;
-            background-color: darken($color-dark, 10%);
+            background-color: darken($color-dark, 20%);
             border-color: darken($color-dark, 20%);
         }
     }
 
     &.btn-light {
-        background-color: $color-light;
-        border-color: $color-light;
+        color: $color-dark;
+        background-color: darken($color-light, 10%);
+        border: 2px solid darken($color-light, 10%);
         
         &:hover, &:focus {
-            background-color: darken($color-light, 10%);
+            color: $color-dark;
+            background-color: darken($color-light, 20%);
             border-color: darken($color-light, 20%);
+        }
+    }
+
+    &.btn-whisper {
+        color: $color-dark;
+        background-color: $color-light;
+        border: 2px solid $color-light;
+        
+        &:hover, &:focus {
+            color: $color-dark;
+            background-color: darken($color-light, 10%);
         }
     }
 }
@@ -237,7 +250,7 @@ p, ol, ul, li {
 
     .btn {
         
-        &.btn-outline-primary {
+        &.btn-cta {
             color: $color-light;
             background-color: $color-dark;
             border: 2px solid $color-light;
@@ -254,22 +267,34 @@ p, ol, ul, li {
             color: $color-dark;
             background-color: $color-light;
             border: 2px solid $color-light;
-    
+            
             &:hover, &:focus {
                 color: $color-dark;
-                background-color: darken($color-light, 10%);
-                border-color: darken($color-light, 20%);
+                background-color: lighten($color-light, 20%);
+                border-color: lighten($color-light, 20%);
             }
         }
     
         &.btn-light {
             color: $color-light;
-            background-color: $color-dark;
-            border-color: $color-dark;
+            background-color: lighten($color-dark, 10%);
+            border: 2px solid lighten($color-dark, 10%);
             
             &:hover, &:focus {
-                background-color: darken($color-dark, 10%);
-                border-color: darken($color-dark, 20%);
+                color: $color-light;
+                background-color: lighten($color-dark, 20%);
+                border-color: lighten($color-dark, 20%);
+            }
+        }
+
+        &.btn-whisper {
+            color: $color-light;
+            background-color: $color-dark;
+            border: 2px solid $color-dark;
+            
+            &:hover, &:focus {
+                color: $color-light;
+                background-color: lighten($color-dark, 10%);
             }
         }
     }
@@ -388,7 +413,7 @@ p, ol, ul, li {
     h2 {
         font-family: $primary-font;
         font-weight: $bold;
-        font-size: 1.125rem;
+        font-size: 1.25rem;
         color: lighten($color-dark, 30%);
         text-transform: uppercase;
         letter-spacing: 0.5px;
@@ -440,65 +465,65 @@ p, ol, ul, li {
                     background-color: $color-dark;
                     border-color: $color-dark;
         
-                    &.lighter {
-                        background-color: lighten($color-dark, 10%);
-                        border-color: lighten($color-dark, 10%);
-                    }
                     &.darker {
                         background-color: darken($color-dark, 10%);
                         border-color: darken($color-dark, 10%);
+                    }
+                    &.lighter {
+                        background-color: lighten($color-dark, 10%);
+                        border-color: lighten($color-dark, 10%);
                     }
                 }
                 &.color-light {
                     background-color: $color-light;
                     border-color: lighten($color-dark, 25%);
         
-                    &.lighter {
-                        background-color: lighten($color-light, 10%);
-                        border-color: lighten($color-light, 10%);
-                    }
                     &.darker {
                         background-color: darken($color-light, 10%);
                         border-color: darken($color-light, 10%);
+                    }
+                    &.lighter {
+                        background-color: lighten($color-light, 10%);
+                        border-color: lighten($color-light, 10%);
                     }
                 }
                 &.accent-red {
                     background-color: $accent-red;
                     border-color: $accent-red;
-        
-                    &.lighter {
-                        background-color: lighten($accent-red, 30%);
-                        border-color: lighten($accent-red, 30%);
-                    }
+
                     &.darker {
                         background-color: darken($accent-red, 10%);
                         border-color: darken($accent-red, 10%);
+                    }
+                    &.lighter {
+                        background-color: lighten($accent-red, 30%);
+                        border-color: lighten($accent-red, 30%);
                     }
                 }
                 &.accent-green {
                     background-color: $accent-green;
                     border-color: $accent-green;
-        
-                    &.lighter {
-                        background-color: lighten($accent-green, 30%);
-                        border-color: lighten($accent-green, 30%);
-                    }
+
                     &.darker {
                         background-color: darken($accent-green, 10%);
                         border-color: darken($accent-green, 10%);
+                    }
+                    &.lighter {
+                        background-color: lighten($accent-green, 30%);
+                        border-color: lighten($accent-green, 30%);
                     }
                 }
                 &.accent-blue {
                     background-color: $accent-blue;
                     border-color: $accent-blue;
         
-                    &.lighter {
-                        background-color: lighten($accent-blue, 10%);
-                        border-color: lighten($accent-blue, 10%);
-                    }
                     &.darker {
                         background-color: darken($accent-blue, 10%);
                         border-color: darken($accent-blue, 10%);
+                    }
+                    &.lighter {
+                        background-color: lighten($accent-blue, 10%);
+                        border-color: lighten($accent-blue, 10%);
                     }
                 }
             }
@@ -513,5 +538,16 @@ p, ol, ul, li {
     }
     .icon-example {
         font-size: 2rem;
+    }
+    .buttons {
+        .description-wrap {
+            margin-bottom: 1rem;
+
+            p {
+                margin-top: 1rem;
+                text-align: center;
+                font-size: 0.875rem;
+            }
+        }
     }
 }
